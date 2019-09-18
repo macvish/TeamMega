@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaTwitter, FaFacebook, FaRegUser, FaLock } from 'react-icons/fa';
+import { FaTwitter, FaFacebook } from 'react-icons/fa';
 import { FaInstagram, FaYoutube, FaMediumM } from 'react-icons/fa';
 import './App.css';
+import Login from './login';
 import logo from './logo.svg';
 
 function App() {
@@ -17,31 +18,7 @@ function App() {
         <div className="main">
           <div>
             <div className="login">
-              <div>
-                <form>
-                  <div className="login_back">
-                   <FaRegUser className="side_icons"/>
-                   <input 
-                      type="text" 
-                      className="input" 
-                      placeholder="Email Address or Username"
-                      required 
-                   /><br/>
-                  </div>
-                  <div className="login_back">
-                    <FaLock className="side_icons"/>  
-                    <input 
-                      type="password" 
-                      className="input" 
-                      placeholder="Password" 
-                      required
-                    />
-                  </div>
-                   
-                  <input type="submit" className="btn" value="Login"/>
-                </form>
-                <a href="./#">Forgot Password?</a>
-              </div>
+              <Login />
             </div>
             <div className="signup">
             <div>
