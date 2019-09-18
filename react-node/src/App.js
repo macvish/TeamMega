@@ -24,7 +24,8 @@ function App() {
                    <input 
                       type="text" 
                       className="input" 
-                      placeholder="Email Address or Username" 
+                      placeholder="Email Address or Username"
+                      required 
                    /><br/>
                   </div>
                   <div className="login_back">
@@ -33,6 +34,7 @@ function App() {
                       type="password" 
                       className="input" 
                       placeholder="Password" 
+                      required
                     />
                   </div>
                    
