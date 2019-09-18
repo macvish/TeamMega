@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaTwitter, FaFacebook, FaRegUser, FaLock } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaMediumM } from 'react-icons/fa';
 import './App.css';
 import logo from './logo.svg';
 
@@ -13,27 +15,58 @@ function App() {
           </div>
         </div>
         <div className="main">
-        <div>
-            <form>
-              <input type="text" className="input" placeholder="Email Address or Username" /><br/>
-              <input type="password" className="input" placeholder="Password" />
-              <input type="submit" className="btn" value="Login"/>
-            </form>
-            <p>or login with</p>
-            <p>Forgot Password?</p>
+          <div>
+            <div className="login">
+              <div>
+                <form>
+                  <div className="login_back">
+                   <FaRegUser className="side_icons"/>
+                   <input 
+                      type="text" 
+                      className="input" 
+                      placeholder="Email Address or Username" 
+                   /><br/>
+                  </div>
+                  <div className="login_back">
+                    <FaLock className="side_icons"/>  
+                    <input 
+                      type="password" 
+                      className="input" 
+                      placeholder="Password" 
+                    />
+                  </div>
+                   
+                  <input type="submit" className="btn" value="Login"/>
+                </form>
+                <a href="./#">Forgot Password?</a>
+              </div>
+            </div>
             <div className="signup">
-              <p>Don't have an Account?</p>
+            <div>
+              <span>Don't have an Account?</span>
               <button className="btn_signup">Sign up</button>
+              </div>
             </div>
           </div>
         </div>
         <div className="footer">
-          <span>FOLLOW US</span>
+          <div>
+            <span><u>FOLLOW US</u></span><br/>
+            <div className="icons">
+              <FaTwitter className="fa-icons" /> 
+              <FaFacebook className="fa-icons" /> 
+              <FaInstagram className="fa-icons" /> 
+              <FaYoutube className="fa-icons" /> 
+              <FaMediumM className="fa-icons" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="col-2">
-        <h1>We are the Future of Work</h1>
-        <h3>Join us today</h3>
+        <div>
+          <span>We are the Future of Work</span><br/>
+          <p>Join us today</p>
+        </div>
       </div>
     </div>
   );
