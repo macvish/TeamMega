@@ -1,6 +1,6 @@
 body{
     margin: 0;
-}
+    font-family: 'Raleway', sans-serif;
 .container{
     display: flex;
     flex-direction: row;
@@ -114,11 +114,18 @@ body{
       margin-left: 25%;
       line-height: 40px;
       width: 120px;
+      font-weight: bold
     }
     .main a{
       display: block;
       margin-bottom: 0px;
       text-align: center;
+      color: #fff;
+      text-decoration: none;
+      font-weight:700;     
+    }
+    a{
+      text-decoration: none;
       color: #000;
       text-decoration: none;
       font-weight:700;
@@ -176,4 +183,146 @@ body{
       font-size: calc(10px + 2vmin);
       color: white;
     } */
+  
+    /* sign up form popup */
+
+.signup-form-popeffect {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(152, 152, 152, 0.7);
+	transition: opacity 0ms;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 99;
+}
+
+.signup-form-popeffect:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup {
+	background: #eaeaeabf;
+	border-radius: 4px;
+	max-width: 430px;
+	position: relative;
+	margin: 11em auto;
+	padding: 3em 2em;
+	z-index: 999;
+	text-align: center;
+}
+
+.popup .close {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+}
+
+.popup .close:hover {
+	color: #686de0;
+}
+/* //signup form popup */
+
+
+.form-field-transform input[type="email"],
+.form-field-transform input[type="password"],
+.form-field-transform input[type="text"] {
+	width: 100%;
+	color: #000;
+	outline: none;
+	border: none;
+	border-bottom: #F61067 2px solid;
+	-webkit-appearance: none;
+	background: #ffffff96;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	box-sizing: border-box;
+}
+
+
+
+@media(max-width:992px) {
+  
+}
+
+@media(max-width:900px) {
+	.form-field-transform input[type="email"],
+	.form-field-transform input[type="password"],
+	.form-field-transform input[type="text"] {
+		padding: .7em .7em;
+    }
+}
+
+@media(max-width:800px) {
+    .form-field-transform input[type="email"],
+	.form-field-transform input[type="password"],
+	.form-field-transform input[type="text"] {
+		padding: .7em .7em;
+	}
+ 
+}
+
+@media(max-width:736px) {
+
+    .form-field-transform input[type="email"],
+	.form-field-transform input[type="password"],
+	.form-field-transform input[type="text"] {
+		margin: 0px 0px 20px;
+	}
+
+}
+
+
+@media(max-width:600px) {
+
+    
+}
+
+@media(max-width:568px) {
+	.form-field-transform input[type="email"],
+	.form-field-transform input[type="password"],
+	.form-field-transform input[type="text"] {
+		margin: 0px 0px 17px;
+    }
+}
+
+@media(max-width:480px) {
+    .form-field-transform input[type="email"],
+	.form-field-transform input[type="password"],
+	.form-field-transform input[type="text"] {
+		margin: 0px 0px 17px;
+    }
+}
+
+@media(max-width:441px) {
+
+    .form-login input[type="email"],
+    .form-login input[type="password"] {
+        width: 91%;
+    }
+}
+
+
+@media(max-width:350px) {
+    .form-field-transform input[type="email"],
+	.form-field-transform input[type="password"],
+	.form-field-transform input[type="text"] {
+		margin: 0px 0px 14px;
+    }
+    form.right-search,.searchbar-grid button.btn, .searchbar-grid .search {
+        display:none; 
+    }
+
+}
+
+/*--//responsive--*/
     
