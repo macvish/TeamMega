@@ -83,7 +83,7 @@ body{
     padding-top: 70px;
   }
   .side_icons{
-    border-right: 2px solid #E5E5E5;
+    border-right: 2px solid #cbcbcb;
     padding-right: 10px;
   }
   .input{
@@ -210,7 +210,7 @@ background: #eaeaeabf;
 border-radius: 4px;
 max-width: 430px;
 position: relative;
-margin: 11em auto;
+margin: 3em auto;
 padding: 3em 2em;
 z-index: 999;
 text-align: center;
@@ -232,41 +232,39 @@ color: #686de0;
 }
 /* //signup form popup */
 
-
-.form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
-width: 100%;
-color: #000;
-outline: none;
-border: none;
-border-bottom: #F61067 2px solid;
--webkit-appearance: none;
-background: #ffffff96;
--moz-transition: all 0.5s ease-in-out;
--o-transition: all 0.5s ease-in-out;
--ms-transition: all 0.5s ease-in-out;
-box-sizing: border-box;
+.signup_back{
+  background: #eaeaeabf;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 25px;
+  padding: 5px;
+  padding-top: 10px;
+  width: 100%;
 }
-
-
+.signup-input{
+  display: inline-block;
+  color: #000;
+  padding-top: 15px;
+  padding-left: 15px;
+  background: none;
+  border: none;
+  width: 80%;
+  box-sizing: border-box;
+}
 
 @media(max-width:992px) {
 
 }
 
 @media(max-width:900px) {
-.form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
+  .signup-input {
   padding: .7em .7em;
   }
 }
 
 @media(max-width:800px) {
-  .form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
+  .signup-input{
   padding: .7em .7em;
 }
 
@@ -274,9 +272,7 @@ box-sizing: border-box;
 
 @media(max-width:736px) {
 
-  .form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
+  .signup-input {
   margin: 0px 0px 20px;
 }
 
@@ -289,34 +285,26 @@ box-sizing: border-box;
 }
 
 @media(max-width:568px) {
-.form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
+  .signup-input {
   margin: 0px 0px 17px;
   }
 }
 
 @media(max-width:480px) {
-  .form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
+  .signup-input {
   margin: 0px 0px 17px;
   }
 }
 
 @media(max-width:441px) {
-
-  .form-login input[type="email"],
-  .form-login input[type="password"] {
+  .signup-input {
       width: 91%;
   }
 }
 
 
 @media(max-width:350px) {
-  .form-field-transform input[type="email"],
-.form-field-transform input[type="password"],
-.form-field-transform input[type="text"] {
+  .signup-input {
   margin: 0px 0px 14px;
   }
   form.right-search,.searchbar-grid button.btn, .searchbar-grid .search {
