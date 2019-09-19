@@ -20,7 +20,9 @@ function Row1() {
                     <div className="signup">
                         <div>
                             <span>Don't have an Account?</span>
-                            <button className="btn_signup">Sign up</button>
+                            <a href="#signupForm">
+                                <button className="btn_signup" type="submit">Sign up</button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
 .container{
 display: flex;
 flex-direction: row;
@@ -173,4 +177,130 @@ flex-direction: row;
   font-size: calc(10px + 2vmin);
   color: white;
 } */
-
+.signup-form-popeffect {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(152, 152, 152, 0.7);
+  transition: opacity 0ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  }
+  
+  .signup-form-popeffect:target {
+  visibility: visible;
+  opacity: 1;
+  }
+  
+  .popup {
+  background: #eaeaeabf;
+  border-radius: 4px;
+  max-width: 430px;
+  position: relative;
+  margin: 3em auto;
+  padding: 3em 2em;
+  z-index: 999;
+  text-align: center;
+  }
+  
+  .popup .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  }
+  
+  .popup .close:hover {
+  color: #686de0;
+  }
+  /* //signup form popup */
+  
+  .signup_back{
+    background: #eaeaeabf;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 5px;
+    padding-top: 10px;
+    width: 100%;
+  }
+  .signup-input{
+    display: inline-block;
+    color: #000;
+    padding-top: 15px;
+    padding-left: 15px;
+    background: none;
+    border: none;
+    width: 80%;
+    box-sizing: border-box;
+  }
+  
+  @media(max-width:992px) {
+  
+  }
+  
+  @media(max-width:900px) {
+    .signup-input {
+    padding: .7em .7em;
+    }
+  }
+  
+  @media(max-width:800px) {
+    .signup-input{
+    padding: .7em .7em;
+  }
+  
+  }
+  
+  @media(max-width:736px) {
+  
+    .signup-input {
+    margin: 0px 0px 20px;
+  }
+  
+  }
+  
+  
+  @media(max-width:600px) {
+  
+    
+  }
+  
+  @media(max-width:568px) {
+    .signup-input {
+    margin: 0px 0px 17px;
+    }
+  }
+  
+  @media(max-width:480px) {
+    .signup-input {
+    margin: 0px 0px 17px;
+    }
+  }
+  
+  @media(max-width:441px) {
+    .signup-input {
+        width: 91%;
+    }
+  }
+  
+  
+  @media(max-width:350px) {
+    .signup-input {
+    margin: 0px 0px 14px;
+    }
+    form.right-search,.searchbar-grid button.btn, .searchbar-grid .search {
+        display:none; 
+    }
+  
+  }
+  
+  /*--//responsive--*/
