@@ -5,8 +5,6 @@ body{
 .container{
   display: flex;
   flex-direction: row;
-  position: relative;
-  min-height: 100vh;
   }
   .col-1{
     flex: 2;
@@ -26,7 +24,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: relative;
   }
   .col-2 div{
     margin-left: 5%;
@@ -96,7 +93,6 @@ body{
     padding-left: 15px;
     background: none;
     border: none;
-    width: 80%;
   }
   .login_back{
     background: #FEFBFB;
@@ -119,9 +115,7 @@ body{
     margin-left: 25%;
     line-height: 40px;
     width: 120px;
-    font-weight: 600;
-    font-family: 'Raleway';
-    font-weight: bold;
+    font-weight: bold
   }
   .main a{
     display: block;
@@ -148,8 +142,6 @@ body{
   .btn_signup{
     display: block;
     background: #0A0933;
-    font-size: 18px;
-    font-weight: 600;
     font-size: 19px;
     font-weight: 700;
     color: whitesmoke;
@@ -158,7 +150,6 @@ body{
     margin-top: 10px;
     line-height: 2;
     width: 100px;
-    font-family: 'Raleway'
   }
   .footer{
     flex: 1;
@@ -166,8 +157,6 @@ body{
     justify-content: center;
     background: #F61067;
     height: 15%;
-    bottom: 0;
-    width: 100%;
   }
   .footer span{
     display: block;
@@ -185,7 +174,6 @@ body{
     color: #FFFEFE;
     margin: 10px;
   }
-
   /* .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -265,77 +253,6 @@ color: #686de0;
   box-sizing: border-box;
 }
 
-
-
-
-@media (min-width: 1366px) {
-  .col-1 {
-      flex:4
-  }
-
-  .col-2 {
-      flex: 6;
-      display: flex
-  }
-
-  .login_back {
-      width: 150%
-  }
-
-  .btn {
-      width: 80%
-  }
-}
-@media (min-width: 992px) {
-  .col-1 {
-    flex:6
-}
-
-.col-2 {
-    flex: 4;
-    display: flex
-}
-
-.login_back {
-    width: 150%
-}
-
-.btn {
-    width: 80%
-}
-}
-
-.col-2 {
-    flex: 6;
-    display: flex
-}
-
-.login_back {
-    width: 150%
-}
-
-.btn {
-    width: 80%
-}
-@media(max-width:975px) {
-  .signup-input {
-  padding: .7em .7em;
-  }
-  .col-2 {
-    flex: 4;
-    display: flex
-}
-}
-@media(max-width:960px) {
-  .signup-input {
-  padding: .7em .7em;
-  }
-  .col-2 {
-    flex: 4;
-    display: none
-}
-}
-
 @media(max-width:992px) {
 
 }
@@ -344,127 +261,45 @@ color: #686de0;
   .signup-input {
   padding: .7em .7em;
   }
-  .col-2 {
-    flex: 4;
-    display: none
-}
 }
 
 @media(max-width:800px) {
   .signup-input{
   padding: .7em .7em;
-
 }
 
 }
-
-}
-
 
 @media(max-width:736px) {
-  .signup-input {
-  margin: 0px 0px 20px;
-}
 
   .signup-input {
   margin: 0px 0px 20px;
 }
 
 }
+
 
 @media(max-width:600px) {
-  .col-2 {
-    flex: 5;
-    display: none
-}
 
+  
 }
 
 @media(max-width:568px) {
   .signup-input {
   margin: 0px 0px 17px;
   }
-  .col-2 {
-    flex: 4;
-    display: none
-}
-}
-
-
-@media (max-height: 500px) {
-  .col-1 {
-    flex:5
-}
-
-.col-2 {
-    flex: 6;
-    display: flex
-}
-
-.login_back {
-    width: 150%
-}
-
-.btn {
-    width: 80%
-}
-.signup{
-  margin-top: 10px;
-  margin-left: 30px;
-  margin-bottom: 15%;
-}
-
-.btn_signup {
-  display: block;
-  font-size: 19px;
-  font-weight: 700;
-  color: whitesmoke;
-  margin-top: 10px;
 }
 
 @media(max-width:480px) {
   .signup-input {
   margin: 0px 0px 17px;
   }
-  .col-1 {
-    flex:5
 }
-
-.col-2 {
-    flex: 6;
-    display: none
-}
-
-.login_back {
-    width: 150%
-}
-
-.btn {
-    width: 80%
-}
-}
-
 
 @media(max-width:441px) {
   .signup-input {
       width: 91%;
   }
-  .col-1 {
-    flex:5
-}
-
-.col-2 {
-    flex: 6;
-    display: none
-}
-
-.login_back {
-    width: 150%
-}
-
-.btn {
-    width: 80%
-}
 }
 
 
@@ -472,49 +307,77 @@ color: #686de0;
   .signup-input {
   margin: 0px 0px 14px;
   }
-
-  .col-1 {
-    flex:5
-}
   form.right-search,.searchbar-grid button.btn, .searchbar-grid .search {
       display:none; 
   }
 
-.col-2 {
-    flex: 6;
-    display: none
 }
 
-.login_back {
-    width: 150%
-}
-
-.btn {
-    width: 80%
-}
-
-}
-
-@media(max-width:300px) {
-  .signup-input {
-  margin: 0px 0px 14px;
+@media only screen and (min-device-width: 300px) and (max-device-width: 800px){
+  .col-1{
+    flex: 3;
+    flex-direction: column;
   }
-  .col-1 {
-    flex:5
+  .col-2{
+    visibility: hidden;
+    position: absolute;    
+  }
+  .header {
+    height: 17%;
 }
-
-.col-2 {
-    flex: 6;
-    display: none
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 45px;
 }
-
-.login_back {
-    width: 150%
+.header span {
+  font-size: 35px;
 }
-
-.btn {
-    width: 80%
+  .main{
+    background: url('https://res.cloudinary.com/davidjnr2/image/upload/v1568679900/typing_twhxz9.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    box-sizing: border-box;
+    height: 85%;
+  }
+  .footer {
+    height: 17%;
+  }
+  .signup{
+    padding-top: 30%;
+    margin-top: 0;
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
+  .btn_signup{
+    font-size: 17px;
+    margin-top: 8px;
+    line-height: 2;
+    width: 100px;
+  }
+  /* .signup-form-popeffect {
+    bottom: 8.2em;
+  } */
+  .popup {
+    max-width: 100%;
+    padding: 2em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
 }
-
+.signup_back{
+  padding: 5px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.signup-input{
+  margin-bottom: 0;
+  width: 80%;
+}
 }
 /*--//responsive--*/

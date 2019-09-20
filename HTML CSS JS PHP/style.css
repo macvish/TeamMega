@@ -313,4 +313,71 @@ color: #686de0;
 
 }
 
+@media only screen and (min-device-width: 300px) and (max-device-width: 800px){
+  .col-1{
+    flex: 3;
+    flex-direction: column;
+  }
+  .col-2{
+    visibility: hidden;
+    position: absolute;    
+  }
+  .header {
+    height: 17%;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 45px;
+}
+.header span {
+  font-size: 35px;
+}
+  .main{
+    background: url('https://res.cloudinary.com/davidjnr2/image/upload/v1568679900/typing_twhxz9.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    box-sizing: border-box;
+    height: 85%;
+  }
+  .footer {
+    height: 17%;
+  }
+  .signup{
+    padding-top: 30%;
+    margin-top: 0;
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
+  .btn_signup{
+    font-size: 17px;
+    margin-top: 8px;
+    line-height: 2;
+    width: 100px;
+  }
+  /* .signup-form-popeffect {
+    bottom: 8.2em;
+  } */
+  .popup {
+    max-width: 100%;
+    padding: 2em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.signup_back{
+  padding: 5px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.signup-input{
+  margin-bottom: 0;
+  width: 80%;
+}
+}
 /*--//responsive--*/
