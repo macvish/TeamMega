@@ -107,7 +107,6 @@ body{
     padding: 5px;
     padding-top: 10px;
     width: 250px;
-    
   }
   .btn{
     display: block;
@@ -121,7 +120,8 @@ body{
     line-height: 40px;
     width: 120px;
     font-weight: 600;
-    font-family: 'Raleway'
+    font-family: 'Raleway';
+    font-weight: bold;
   }
   .main a{
     display: block;
@@ -150,6 +150,8 @@ body{
     background: #0A0933;
     font-size: 18px;
     font-weight: 600;
+    font-size: 19px;
+    font-weight: 700;
     color: whitesmoke;
     border: none;
     border-radius: 5px;
@@ -166,7 +168,6 @@ body{
     height: 15%;
     bottom: 0;
     width: 100%;
-
   }
   .footer span{
     display: block;
@@ -184,7 +185,7 @@ body{
     color: #FFFEFE;
     margin: 10px;
   }
-  
+
   /* .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -335,6 +336,10 @@ color: #686de0;
 }
 }
 
+@media(max-width:992px) {
+
+}
+
 @media(max-width:900px) {
   .signup-input {
   padding: .7em .7em;
@@ -348,11 +353,18 @@ color: #686de0;
 @media(max-width:800px) {
   .signup-input{
   padding: .7em .7em;
+
 }
 
 }
+
+}
+
 
 @media(max-width:736px) {
+  .signup-input {
+  margin: 0px 0px 20px;
+}
 
   .signup-input {
   margin: 0px 0px 20px;
@@ -460,9 +472,13 @@ color: #686de0;
   .signup-input {
   margin: 0px 0px 14px;
   }
+
   .col-1 {
     flex:5
 }
+  form.right-search,.searchbar-grid button.btn, .searchbar-grid .search {
+      display:none; 
+  }
 
 .col-2 {
     flex: 6;
@@ -501,9 +517,4 @@ color: #686de0;
 }
 
 }
-
-
-
-
-
 /*--//responsive--*/
