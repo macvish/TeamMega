@@ -6,16 +6,39 @@ $_msgStyle = "";
 
 if(filter_has_var(INPUT_POST, 'signup-submit')){
    
-   
-    $username = htmlspecialchars($_POST['signup-username']);
-    $email = htmlspecialchars($_POST['signup-email']);
-    $password = htmlspecialchars($_POST['signup-password']);
-    $repassword = htmlspecialchars($_POST['repeat-password']);
+    $fullname = $_POST['signup-fullname'];
+    $username = $_POST['signup-username'];
+    $phone = $_POST['signup-phone'];
+    $email = $_POST['signup-email'];
+    $password = $_POST['signup-password'];
+    $repassword = $_POST['repeat-password'];
 
     $check_username = preg_match("/^[a-zA-Z0-9]*$/", $username);
     $check_email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-    if(empty($username) || empty($email) || empty($password) || empty($repassword)){
+    try {
+
+        // Get Submited data from the from.
+        
+        $formData = array(
+        
+        'fullname' => $fullname,
+        
+        'username' => $username,
+
+        'phone-no' => $phone,
+
+        'email' => $email,
+        
+        'password' => $password
+        
+        );
+        
+        $jsonData = file_get_contents($jsonFile);
+        
+        $arrayData = json_decode($jsonData, true);
+
+    if(empty($fullname) || empty($username) || empty($phone) || empty($email) || empty($password) || empty($repassword)){
         $_msg = "Please fill fields as appropriate";
         $_msgClass = "red";
     }elseif(!$check_username && !$check_email){
@@ -26,72 +49,22 @@ if(filter_has_var(INPUT_POST, 'signup-submit')){
         $_msg = "Password Mismatch";
     }
    else{
-    $_msg = "Sign Up Successful";
-   }
-} else{
-    $_msg = "Fields Cannot be empty";
+    array_push($arrayData, $formData);
+    $jsonData = json_encode($arrayData, JSON_PRETTY_PRINT);
+    
+    if (file_put_contents($jsonFile, $jsonData)) {
+    
+    echo 'Welcome ', $_POST['signup-name'];
+    
+    } else {
+    echo "error";
+    }
+    }
 }
-?>
-<body>
-        <div class="container">
-            <div class="col-1">
-            <div class="header">
-                <div>
-                <img src="./logo.svg" class="App-logo" alt="logo" /><br/>
-                <span>Workit</span>
-                </div>
-            </div>
-            <div class="main">
-                <div>
-                <div class="login">
-                    <div>
-<?php if($_msg != ""): ?><p><?php echo $_msg; ?></p><?php endif;?>
-                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
-                        <div class="signUp">
-                        <i class="fa fa-user side_icons"></i>
-                        <input 
-                            type="text" 
-                            class="input" name="signup-username"
-                            placeholder="Username"
-                            value="<?php echo isset($_POST['signup-username']) ? $username : '';?>"
-                        /><br/>
-                        </div>
-                        <div class="signUp">
-                            <i class="fa fa-envelope side_icons"></i>  
-                            <input 
-                                type="text" 
-                                class="input" name="signup-email"
-                                placeholder="Email Address" 
-                                value="<?php echo isset($_POST['signup-email']) ? $email : '';?>"
-                            />
-                            </div>
-                        <div class="signUp">
-                            <i class="fa fa-lock side_icons"></i>  
-                            <input 
-                                type="password" 
-                                class="input" name="signup-password"
-                                placeholder="Password" 
-                                
-                            />
-                            </div>
-                            <div class="signUp">
-                            <i class="fa fa-lock side_icons"></i>  
-                            <input 
-                                type="password" 
-                                class="input" name="repeat-password"
-                                placeholder="Repeat Password" 
-                               
-                            />
-                            </div>
-                        
-                        <button type="submit" class="btn" name="signup-submit">Submit</button>
-                    </form>
-                    <a href="index.php">Login</a>
-                    </div>
-                </div>
-                
-                </div>
-            </div>
-<?php
-require "footer.php";
+catch (Exception $e) {
+
+    echo 'Exception Caught : ', $e->getMessage(), "\n";
+    
+    }
+}
 ?>

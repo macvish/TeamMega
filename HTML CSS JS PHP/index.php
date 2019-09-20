@@ -4,17 +4,36 @@ $_msg = "";
 $_msgStyle = "";
 
 if(filter_has_var(INPUT_POST, 'submit')){
-    $userid = htmlspecialchars($_POST['usermail']);
-    $userpwd = htmlspecialchars($_POST['password']);
+    $userid = $_POST['signup-email'];
+    $userpwd = $_POST['signup-password'];
+    
+    $json = file_get_contents("./data.json"); // get content of json
+    $jsonArray = json_decode($json, true); // convert json to array
 
-    if(!empty($userid) && !empty($userpwd)){
-        if(filter_var($userid, FILTER_VALIDATE_EMAIL === false)){
-            $msg="Please provide a valid email";
+        try {
+        
+        foreach ($jsonArray as $key => $user) {
+            if(!empty($userid) && !empty($userpwd)){
+                if(filter_var($userid, FILTER_VALIDATE_EMAIL === false)){
+                $msg="Please provide a valid email";
+                }
+                else{
+                    $_msg = "Please Fill In All Fields";
+                    $_msgClass = "red";
+                }
+            }
+            else if ($userid != $user['signup-email'] || $userpwd != $user['signup-password']) {
+                $_msg = "Email or password do not match";                
+            } else {
+                echo "Welcome ";
+                echo $user['signup-fullname'];
+            }
         }
-    }else{
-        $_msg = "Please Fill In All Fields";
-        $_msgClass = "red";
     }
+    catch(Exception $e) {
+        echo 'Exception Caught : ', $e->getMessage(), "\n";
+    }
+}
 }
 ?>
 <body>
