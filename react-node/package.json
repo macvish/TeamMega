@@ -31,6 +31,6 @@
     ]
   },
   "devDependencies": {
-    "webpack": "^4.40.2"
+    "eslint-loader": "^3.0.0"
   }
 }
