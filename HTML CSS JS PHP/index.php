@@ -1,41 +1,5 @@
 <?php 
 require 'header.php';
-
-$_msg = "";
-$errors = array();
-$_msgStyle = "";
-
-$db = mysqli_connect('localhost', 'id10948804_workit', 'teamMega123$', 'id10948804_meagworkit');
-
-    if (isset($_POST['submit'])) {
-
-    $userid = mysqli_real_escape_string($db, $_POST['userid']);
-
-    $userpwd = mysqli_real_escape_string($db, $_POST['password']);
-
-            if(empty($userid) || empty($userpwd)){
-
-                    $_msg = "Please Fill In All Fields";
-
-                    array_push($errors, "Please Fill In All Fields");
-            }
-
-            if (count($errors) == 0) {
-    $password = md5($userpwd);
-    $query = "SELECT * FROM user WHERE username = '$userid' AND password= '$password'";
-    $results = mysqli_query($db, $query);
-
-    if (mysqli_num_rows($results) == 1) {
-      $_SESSION['username'] = $userid;
-      $_SESSION['success'] = "You are now logged in";
-      header('location: home.php');
-    }else {
-        array_push($errors, "Wrong username/password combination");
-        $_msg = "Wrong username/password combination";
-    }
-  }
-
-        }
 ?>
 
 <body>

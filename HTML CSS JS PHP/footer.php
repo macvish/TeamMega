@@ -42,11 +42,11 @@
 
                 <div class="popup">                       
 
-                <?php if($_msg != ""): ?><p><?php echo $_msg; ?></p><?php endif;?>
+                <?php if($msg != ""): ?><p><?php echo $msg; ?></p><?php endif;?>
 
                    <div class="letter-w3ls">
 
-                      <form action="./sign_up.php" method="POST">
+                      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
 
                         <div class="signup_back">
 
