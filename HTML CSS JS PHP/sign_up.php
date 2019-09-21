@@ -70,13 +70,12 @@ if (isset($_POST['signup-submit'])) {
 if (count($errors) == 0) {
   	$password_1 = md5($password);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO User (fullname, username, phone_no, email, password) 
+  	$query = "INSERT INTO user (fullname, username, phone_no, email, password) 
   			  VALUES('$fullname', '$username', '$phone', '$email', '$password_1')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: ./home.php');
+  	header('location: home.php');
   }
 }
-
 ?>

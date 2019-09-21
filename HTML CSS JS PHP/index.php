@@ -13,47 +13,25 @@ $db = mysqli_connect('localhost', 'id10948804_workit', 'teamMega123$', 'id109488
 
     $userpwd = mysqli_real_escape_string($db, $_POST['password']);
 
-            if(!empty($userid) || !empty($userpwd)){
-
-                if(filter_var($userid, FILTER_VALIDATE_EMAIL === false)){
-
-                $msg = "Please provide a valid email";
-                rray_push($errors, "Please provide a valid email");
-                }
-
-                else{
+            if(empty($userid) || empty($userpwd)){
 
                     $_msg = "Please Fill In All Fields";
 
                     array_push($errors, "Please Fill In All Fields");
-
-                }
-
             }
 
-            // else if ($userid != $user['email'] || $userpwd != $user['password']) {
-
-            //     $_msg = "Email or password do not match";                
-
-            // } else {
-
-            //     echo "Welcome ";
-
-            //     echo $user['fullname'];
-
-            // }
             if (count($errors) == 0) {
-    $password = md5($password);
-    $query = "SELECT * FROM User WHERE username = '$userid' AND password= '$userpwd'";
+    $password = md5($userpwd);
+    $query = "SELECT * FROM user WHERE username = '$userid' AND password= '$password'";
     $results = mysqli_query($db, $query);
 
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $userid;
       $_SESSION['success'] = "You are now logged in";
-      header('location: ./home.php');
+      header('location: home.php');
     }else {
         array_push($errors, "Wrong username/password combination");
-        $msg = "Wrong username/password combination";
+        $_msg = "Wrong username/password combination";
     }
   }
 
