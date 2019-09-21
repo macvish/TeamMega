@@ -1,13 +1,16 @@
 <?php
 session_start();
 
-$_msgStyle = "";
+$_msg = "";
+$errors = array();
+
+$msg = "";
+$error = array();
+
 
 $db = mysqli_connect('localhost', 'id10948804_workit', 'teamMega123$', 'id10948804_meagworkit');
 
 if (isset($_POST['submit'])) {
-  $_msg = "";
-$errors = array();
 
     $userid = mysqli_real_escape_string($db, $_POST['userid']);
 
@@ -39,8 +42,6 @@ $errors = array();
 
 
 if (isset($_POST['signup-submit'])) {
-  msg = "";
-  $error = array();
 
     $fullname = mysqli_real_escape_string($db, $_POST['signup-fullname']);
 
@@ -62,8 +63,6 @@ if (isset($_POST['signup-submit'])) {
 
         $msg = "Please fill fields as appropriate";
         array_push($error, "Please fill fields as appropriate");
-
-        $_msgClass = "red";
 
     }if(!$check_username && !$check_email){
 
